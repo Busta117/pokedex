@@ -1,32 +1,64 @@
 PODS:
-  - Alamofire (5.0.0-rc.2)
-  - AlamofireObjectMapper (6.2.0):
-    - Alamofire (= 5.0.0-rc.2)
+  - Alamofire (5.1.0)
+  - AlamofireImage (4.1.0):
+    - Alamofire (~> 5.1)
+  - AlamofireObjectMapper (6.3.0):
+    - Alamofire (~> 5.1)
     - ObjectMapper (~> 3.5.1)
   - ObjectMapper (3.5.2)
+  - Realm (4.4.0):
+    - Realm/Headers (= 4.4.0)
+  - Realm/Headers (4.4.0)
+  - RealmSwift (4.4.0):
+    - Realm (= 4.4.0)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
   - RxSwift (5.1.1)
   - SVProgressHUD (2.2.5)
+  - SwiftFormat/CLI (0.44.9)
 
 DEPENDENCIES:
-  - AlamofireObjectMapper
+  - AlamofireImage
+  - AlamofireObjectMapper (from `https://github.com/RomanPodymov/AlamofireObjectMapper.git`)
+  - RealmSwift (= 4.4.0)
+  - RxRelay
   - RxSwift
   - SVProgressHUD
+  - SwiftFormat/CLI
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - AlamofireObjectMapper
+    - AlamofireImage
     - ObjectMapper
+    - Realm
+    - RealmSwift
+    - RxRelay
     - RxSwift
     - SVProgressHUD
+    - SwiftFormat
+
+EXTERNAL SOURCES:
+  AlamofireObjectMapper:
+    :git: https://github.com/RomanPodymov/AlamofireObjectMapper.git
+
+CHECKOUT OPTIONS:
+  AlamofireObjectMapper:
+    :commit: f52874edbfc3d6c4f5aebe336ca83b122ddda7c1
+    :git: https://github.com/RomanPodymov/AlamofireObjectMapper.git
 
 SPEC CHECKSUMS:
-  Alamofire: f9450d3c7f6bea2ad62e7a541c3e9b186c7991d6
-  AlamofireObjectMapper: 74d1440c92c42bbcc2b5f4dc81654ac095ec669f
+  Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
+  AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
+  AlamofireObjectMapper: ee298085f0b0881c37ad7b6491a63a9ee96dff84
   ObjectMapper: b53ae947d370bf89423e86be7d4e2d2b2a8d3f40
+  Realm: e125f464884cda953ebefe70c671b75b03b81b9b
+  RealmSwift: 33656a42bd300959a081fc13347376bc478071af
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftFormat: e415b539c50e7a956a44b023544c9846c0c037d7
 
-PODFILE CHECKSUM: 546b23602a3adc4a24265ba33800f7aee9573dde
+PODFILE CHECKSUM: b53fe6fec0fbde340892ba66ba7b0506f3715c71
 
 COCOAPODS: 1.9.1

@@ -7,6 +7,10 @@ target 'PokeDex' do
 
   pod 'SVProgressHUD'
   pod 'RxSwift'
-  pod 'AlamofireObjectMapper'
+  pod 'RxRelay'
+  pod 'AlamofireObjectMapper', :git => 'https://github.com/RomanPodymov/AlamofireObjectMapper.git' #fix dependencies with alamofire 5.1
+  pod 'AlamofireImage'
+  pod 'SwiftFormat/CLI'
+  pod 'RealmSwift', '4.4.0'
 
 end
