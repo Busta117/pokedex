@@ -38,4 +38,8 @@ class PokemonListViewModel {
             }
         }
     }
+
+    func openDetail(pokemon: Pokemon) {
+        coordinator.openDetail(pokemon: pokemon)
+    }
 }

@@ -76,7 +76,8 @@ extension PokemonListViewController: UITableViewDelegate, UITableViewDataSource 
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // open detail
+        let pokemon = viewModel.pokemonListFiltered[indexPath.row]
+        viewModel.openDetail(pokemon: pokemon)
     }
 }
 

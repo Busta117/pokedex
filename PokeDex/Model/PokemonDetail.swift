@@ -18,6 +18,10 @@ class PokemonDetail: Object, Mappable {
     @objc dynamic var mainImageUrl = ""
     @objc dynamic var sprites: Sprites? = Sprites()
     var types = List<Type>()
+    @objc dynamic var speciesUrl = ""
+    @objc dynamic var pokemonDescription = ""
+    var stats = List<Stat>()
+    var moves = List<Move>()
 
     override static func primaryKey() -> String? {
         return "url"
@@ -31,6 +35,9 @@ class PokemonDetail: Object, Mappable {
         types <- map["types"]
         sprites <- map["sprites"]
         sprites?.id = id
+        speciesUrl <- map["species.url"]
+        stats <- map["stats"]
+        moves <- map["moves"]
     }
 
     class func chache(forUrl url: String) -> PokemonDetail? {
@@ -46,10 +53,14 @@ class PokemonDetail: Object, Mappable {
         }
     }
 
+    class func get(for pokemon: Pokemon, complete: @escaping (PokemonDetail?, AFError?) -> Void) {
+        get(forUrl: pokemon.urlDetail, complete: complete)
+    }
+
     class func get(forUrl url: String, complete: @escaping (PokemonDetail?, AFError?) -> Void) {
-//        if let cached = chache(forUrl: url) {
-//            complete(cached, nil)
-//        }
+        if let cached = chache(forUrl: url) {
+            complete(cached, nil)
+        }
 
         AF.request(url).validate().responseObject { (response: DataResponse<PokemonDetail, AFError>) in
             if let value = response.value {

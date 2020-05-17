@@ -25,6 +25,10 @@ class BaseViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        setNavigationBarStyle()
+    }
+
+    func setNavigationBarStyle() {
         guard let navigationBar = navigationController?.navigationBar else {
             return
         }

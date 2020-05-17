@@ -29,3 +29,12 @@ class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
         }
     }
 }
+
+extension UITabBarController {
+    var selectedController: UIViewController? {
+        if let viewControllers = viewControllers {
+            return viewControllers[selectedIndex]
+        }
+        return nil
+    }
+}

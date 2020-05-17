@@ -34,4 +34,8 @@ class Pokemon: Mappable {
                 }
             }
     }
+
+    func detail(complete: @escaping (PokemonDetail?, AFError?) -> Void) {
+        PokemonDetail.get(forUrl: urlDetail, complete: complete)
+    }
 }
